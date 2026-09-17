@@ -19,7 +19,7 @@ export async function GET() {
         });
 
         if (!dbUser) {
-            return new NextResponse("User not founc", { status: 404 });
+            return new NextResponse("User not found", { status: 404 });
         }
 
         const allAchievements = await db.query.achievements.findMany();
